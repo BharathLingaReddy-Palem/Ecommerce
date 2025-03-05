@@ -1,0 +1,19 @@
+
+// Import necessary modules 
+
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
+// Connect to MongoDB Atlas
+
+mongoose.connect(
+  'mongodb+srv://<username>:<password>@cluster0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+  { useNewUrlParser: true, useUnifiedTopology: true }{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+)
+.then(() => console.log('MongoDB connected'))
+.catch((err) => console.log(err));
